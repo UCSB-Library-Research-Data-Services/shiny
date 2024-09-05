@@ -28,3 +28,10 @@ ENV RENV_PATHS_LIBRARY renv/library
 
 # restore packages
 RUN R -e "renv::restore()"
+
+# Copy the shiny app
+COPY waitz waitz
+
+# Launch the shiny app
+RUN R -e 'shiny::runApp()'
+
