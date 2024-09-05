@@ -33,5 +33,5 @@ RUN R -e "renv::restore()"
 COPY waitz waitz
 
 # Launch the shiny app
-RUN R -e 'shiny::runApp()'
+RUN R -e 'shiny::runApp("waitz")'
 
