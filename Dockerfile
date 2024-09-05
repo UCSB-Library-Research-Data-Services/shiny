@@ -20,7 +20,7 @@ RUN wget https://cdn.posit.co/r/${OS_IDENTIFIER}/pkgs/r-${R_VERSION}_1_amd64.deb
 RUN R -e "install.packages('renv', repos = c(CRAN = 'https://cloud.r-project.org'))"
 
 # Copy renv.lock file
-WORKDIR /project
+WORKDIR /home/shinywaitz
 COPY renv.lock renv.lock
 
 # set path for renv
@@ -32,6 +32,7 @@ RUN R -e "renv::restore()"
 # Copy the shiny app
 COPY waitz waitz
 
-# Launch the shiny app
-RUN R -e 'shiny::runApp("waitz")'
+# Launch the shiny app on port 3858
+EXPOSE 3838
+CMD R -e 'shiny::runApp("waitz", port = 3838, host = "0.0.0.0")'
 
