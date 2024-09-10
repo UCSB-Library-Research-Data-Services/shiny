@@ -11,7 +11,7 @@ all the necessary files are on the  `jb-docker` docker branch
 
 1. Build the docker image using the `renv` information (takes 5-10min). Run this command from the top level of the repository
    ```bash
-   docker image build -t shinywaitz/shiny-waitz .
+   docker image build -t shiny-waitz .
    ```
 1. Run the image
    ```bash
