@@ -3,3 +3,10 @@
 waitz/data/TOKEN
 waitz/data/__pycache__/
 waitz/rsconnect/
+
+# Only locfile is needed
+renv/
+
+#MacOS stuff
+**.DS_Store
+
