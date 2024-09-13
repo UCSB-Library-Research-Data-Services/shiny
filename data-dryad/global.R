@@ -1,5 +1,5 @@
 library(shiny)
-library(rdryad) #DEPRECATED!!
+library(rdryad) #DEPRECATED, and no replacement yet https://github.com/ropensci/rdryad/issues/41!!
 library(tidyverse)
 
 # Filename locally
