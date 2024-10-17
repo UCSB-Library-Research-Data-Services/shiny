@@ -12,7 +12,18 @@ zenodo_filename = "data-dryad/data/File_A1.csv"
 my_repo = "Dryad"
 
 
-
+#' Check if data exist locally on drive and download it if not
+#'
+#' @param cached_file a character representing the full filename of the data file your Shiny app needs to load locally
+#' @param doi_url a character either a DOI (for Dryad) or an URL (for Zenodo) to the data archive
+#' @param repo a character that is either "Dryad" or "Zenodo"; default value is Dryad
+#'
+#' @return a data frame corresponding to the data
+#' @export
+#'
+#' @examples
+#' river_data <- data_cache_checker("data/river_data_test.csv" , "10.5061/dryad.f74fs", repo = "Dryad")
+#' 
 data_cache_checker <- function(cached_file, doi_url, repo="Dryad"){
   # Only download the data if it is not yet cached locally
   if (file.exists(cached_file)) {
