@@ -1,6 +1,10 @@
-library(shiny)
-library(tidyverse)
+# Example of a function that checks for the existence of data locally and downloads this data from data repositories (Dryad or Zenodo) if not present on local HD
+# Can be useful if you want to share your Shiny app and the data is large. This will prevent you from downloading the data every time you run the app.
+# User needs to modify the variables at the beginning of the script
 
+
+
+library(tidyverse)
 library(rdryad) #DEPRECATED, and no replacement yet https://github.com/ropensci/rdryad/issues/41!!
 
 
