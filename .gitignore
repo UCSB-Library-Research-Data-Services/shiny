@@ -7,6 +7,10 @@ waitz/rsconnect/
 # Only locfile is needed
 renv/
 
+#Data
+data-dryad/data/*
+
 #MacOS stuff
 **.DS_Store
 
+.Rprofile
