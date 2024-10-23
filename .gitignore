@@ -11,6 +11,6 @@ renv/
 data-dryad/data/*
 
 #MacOS stuff
-**.DS_Store
+**/.DS_Store
 
 .Rprofile
